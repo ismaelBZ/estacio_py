@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>First Site in Python</title>
+</head>
+<body>
+    <h1>First static web site with Python</h1>
+    <hr>
+    <p>This site is made in Python programming language, with Flask framework and render_tamplate() method.</p>
+    {% if name and isLogged %}
+        <p>Also use conditional rendering feature trought a declaration in HTML, receiving back-end and url path values</p>
+        <p>User {{name}} is logged? {{isLogged}}</p>
+    {% endif %}
+</body>
+</html>
