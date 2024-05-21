@@ -110,7 +110,8 @@ class Conta:
               f'Saldo: {self.__balance} \n'
         )
         self.statement.getStatement()
-
+#
+#
 # def main():
 #     client1 = Client('Marluzi', '000.000.000-00', 'Rua das flores')
 #     client2 = Client('Dalustre', '999.999.999-99', 'Beira mar')
@@ -120,11 +121,13 @@ class Conta:
 #     contaConjunta.draw(3000)
 #     contaConjunta.statement.getStatement()
 #
+#
 # if __name__ == '__main__':
 #     main()
 
 
 
+# Class Atribute | @classMethod | Static Method | @staticmethod
 # class Conta:
 #
 #     __agency = 3000
@@ -205,10 +208,63 @@ class Conta:
 #     print(f'Conta c2 - Saldo: {c2.getBalance:17.2f}')
 #     print('-----------------------------------')
 #
+#
 # if __name__ == '__main__':
 #     main()
 
-# Class Atribute | @classMethod | Class Atribute
+
+
+# class NomeCompleto:
+#     def __init__(self, nome, sobrenome):
+#         self.nome = nome
+#         self.sobrenome = sobrenome
+#
+#     @classmethod
+#     def fromString(cls, texto):
+#         nome, sobrenome = map(str, texto.split(' '))
+#         objeto = cls(nome, sobrenome)
+#         return objeto
+#     @staticmethod
+#     def isValid(texto):
+#         nomes = texto.split(' ')
+#         return len(nomes) == 2
+
+
+
+# class NomeCompleto:
+#     def __init__(self, nome, sobrenome):
+#         self.nome = nome
+#         self.sobrenome = sobrenome
+#     @classmethod
+#     def fromString(cls, texto):
+#         nome, sobrenome = map(str, texto.split(' '))
+#         objeto = cls(nome, sobrenome)
+#         return objeto
+#
+#
+# registro1 = NomeCompleto.fromString('Luiz Braga')
+# print(registro1.nome)
+# print(registro1.sobrenome)
+
+
+
+# class Funcionario:
+#     _total_de_funcionarios = 0
+#     def __init__(self, nome, idade):
+#         self.nome = nome
+#         self.idade = idade
+#         Funcionario._total_de_funcionarios += 1
+#     def imprimir(self):
+#         print(self.nome, "tem ", self.idade, " ano(s).")
+#     @property
+#     def contador(self):
+#         return type(self)._total_de_funcionarios # type(self)._propriedade == Funcionario._propriedade => True
+#
+# f1 = Funcionario("Carlos", 18)
+# print(f1.contador)
+
+
+
 # class Circulo:
 #     __total_circulos = 0
 #
@@ -246,6 +302,7 @@ class Conta:
 #     def get_total_circulos(cls):
 #         return cls.__total_circulos
 #
+#
 # def main():
 #     c1 = Circulo(10, 10, 10)
 #     c2 = Circulo(5,  10, 10)
@@ -256,8 +313,10 @@ class Conta:
 #     print(c3.get_total_circulos())
 #     print(c4.get_total_circulos())
 #
+#
 # if __name__ == '__main__':
 #     main()
+
 
 
 # class Circulo:
@@ -268,6 +327,7 @@ class Conta:
 #         self._positionX = positionX
 #         self._positionY = positionY
 #         Circulo._total_circulos += 1
+#
 #
 # def main():
 #     c1 = Circulo(10, 10, 10)
@@ -280,6 +340,29 @@ class Conta:
 #
 #
 # main()
+
+
+
+from datetime import date
+
+# class Pessoa:
+#     def __init__(self, nome, idade):
+#         self.nome = nome
+#         self.idade = idade
+#
+#     @classmethod # Cria uma class, do tipo (Pessoa) e recebe os mesmos atributos do tipo pessoa
+#     def calculaIdade(cls, nome, ano):
+#         return cls(nome, date.today().year - ano)
+#
+#     @staticmethod # Invocado a partir da classe
+#     def ehMaiorIdade(idade):
+#         return idade >= 18
+#
+# p1 = Pessoa('Maria', 18)
+# p2 = Pessoa.calculaIdade('Ana', 2002)
+#
+# print(f'{p1.nome}, {p1.idade} anos, é maior de idade: {Pessoa.ehMaiorIdade(p1.idade)}')
+# print(f'{p2.nome}, {p2.idade} anos, é maior de idade: {Pessoa.ehMaiorIdade(p2.idade)}')
 
 
 # GETTERS AND SETTERS | GETTERS AND SETTERS | GETTERS AND SETTERS
@@ -312,13 +395,15 @@ class Conta:
 #
 # if __name__ == '__main__':
 #     main()
-
-
+#
+#
 # def main():
 #     c1 = Conta(101)
 #     print(f'\n{c1._Conta__numero}')
-#
-# main()
+
+
+
+
 
 # import datetime
 #
@@ -326,6 +411,7 @@ class Conta:
 #     def __init__(self, name, cpf, address):
 #         self.name = name
 #         self.cpf = cpf
+#
 #
 # class Statement:
 #     def __init__(self):
@@ -379,6 +465,7 @@ class Conta:
 #               f'Saldo: {self.balance} \n'
 #         )
 #
+#
 # def main():
 #     client1 = Cliente('Marluzi', '000.000.000-00', 'Rua das flores')
 #     client2 = Cliente('Dalustre', '999.999.999-99', 'Beira mar')
@@ -388,8 +475,11 @@ class Conta:
 #     contaConjunta.draw(3000)
 #     contaConjunta.statement.getStatement()
 #
+#
 # if __name__ == '__main__':
 #     main()
+
+
 
 # class Conta:
 #     def __init__(self, number, owner, cpf):
@@ -444,6 +534,8 @@ class Conta:
 # if __name__ == '__main__':
 #     main()
 
+
+
 # class Conta:
 #     def __init__(self, number, owner, cpf):
 #         self.number = number
@@ -466,6 +558,7 @@ class Conta:
 #               f'Saldo: {self.balance:.2f} \n'
 #         )
 #
+#
 # def main():
 #     c1 = Conta(101, 'Marluzi', '000.000.000-00')
 #     c2 = c1
@@ -474,8 +567,10 @@ class Conta:
 #     print(c1)
 #     print(c2)
 #
+#
 # if __name__ == '__main__':
 #     main()
+
 
 
 # class Conta:
@@ -510,10 +605,10 @@ class Conta:
 #     c1.deposit(100)
 #     c1.draw(75)
 #     c1.printBalance()
-#
-#
+##
 # if __name__ == '__main__':
 #     main()
+
 
 # class Conta:
 #     def __init__(self, number, name, cpf):
@@ -539,6 +634,7 @@ class Conta:
 # if __name__ == '__main__':
 #     main()
 
+
 # class A:
 #     def f(self):
 #         print('foo')
@@ -549,6 +645,7 @@ class Conta:
 #
 # if __name__ == '__main__':
 #     main()
+
 
 # class Conta:
 #     def __init__(self, number, cpf, name, balance):
@@ -566,5 +663,71 @@ class Conta:
 #
 # main()
 
+
+
+# class Pessoa:
+#     def __init__(self, nome, endereco):
+#         self.set_nome = nome
+#         self.set_endereco = endereco
+#
+#     def set_nome(self, nome):
+#         self.nome = nome
+#
+#     def set_endereco(self, endereco):
+#         self.endereco = endereco
+#
+#     def get_nome(self):
+#         return self.set_nome
+#
+#     def get_endereco(self):
+#         return self.set_endereco
+#
+# p1 = Pessoa('Maria', 'Rua A')
+# p2 = Pessoa('João', 'Rua B')
+#
+# print(f'Nome: {p1.get_nome()} \n'
+#       f'Endereco: {p1.get_endereco()}')
+
+
 # class Conta:
 #     pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

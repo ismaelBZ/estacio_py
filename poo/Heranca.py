@@ -61,6 +61,7 @@
 #             self.balance -= value
 #             self.statement.history.append(['Saque:', value, 'Data:', datetime.datetime.now()])
 # def main():
+#     print(issubclass(ContaEspecial, Conta))
 #     client1 = Client('Marluzi', '000.000.000-00')
 #     c1 = ContaEspecial(101, client1)
 #     c1.deposit(5000)

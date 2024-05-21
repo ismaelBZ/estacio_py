@@ -1,5 +1,4 @@
 
-
 # from flask import Flask, request
 #
 # app = Flask(__name__)
@@ -15,6 +14,24 @@
 #
 # if __name__ == '__main__':
 #     app.run()
+
+
+
+# from flask import Flask
+# app = Flask(__name__)
+# @app.route('/')
+# def home():
+#     hello = '<h1>Hello!</h1>'
+#     redirect = '<p>Go to <a href="/login">Login</a></p>'
+#     return hello + redirect
+#
+# @app.route('/login')
+# def login():
+#     return '<p><a href="/">Back Home<a><p>'
+#
+# if __name__ == "__main__":
+#     app.run()
+
 
 
 # from flask import Flask
@@ -33,6 +50,7 @@
 #     app.run()
 
 
+
 # from flask import Flask
 #
 # app = Flask(__name__)
@@ -47,6 +65,7 @@
 #
 # if __name__ == '__main__':
 #     app.run()
+
 
 
 # from flask import Flask

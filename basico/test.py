@@ -1,14 +1,22 @@
-class A:
-    def met(self):
-        return 'A'
+a, b = 0, 1
 
+while b < 10:
+    print (b)
+    a, b = b, a+b
 
-class B(A):
-    def met(self):
-        return super(B, self).met(), "B"
+/ asdj asdyguausdguya
 
-b = B()
-print(b.met())
+# class A:
+#     def met(self):
+#         return 'A'
+#
+#
+# class B(A):
+#     def met(self):
+#         return super(B, self).met(), "B"
+#
+# b = B()
+# print(b.met())
 
 # x = 10
 # y = 3
